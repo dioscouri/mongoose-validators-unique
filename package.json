@@ -1,0 +1,10 @@
+{
+  "name": "mongoose-validator-unique",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "mongoose": "^3.8.19",
+    "mocha": "latest",
+    "should": "latest"
+  }
+}
