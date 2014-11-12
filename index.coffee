@@ -15,11 +15,11 @@ module.exports = (schema, options) ->
     if(schemaType.options?.validators?.unique?)
       uniqueness = schemaType.options.validators.unique
       if(uniqueness == true)
-        schemaType.validators.push([validator(path), message, 'unique'])
+        schemaType.validators.push({validator: validator(path), message: message, type: 'unique'})
       if( typeof uniqueness == "object" and uniqueness.scope?)
-        schemaType.validators.push([validator(path, uniqueness.scope), message, 'unique'])
+        schemaType.validators.push({validator: validator(path, uniqueness.scope), message: message, type: 'unique'})
       if( typeof uniqueness == "object" and uniqueness.condition?)
-        schemaType.validators.push([validator(path, uniqueness.condition), message, 'unique'])
+        schemaType.validators.push({validator: validator(path, uniqueness.condition), message: message, type: 'unique'})
 
 
 validator = (path, scopeOrCondition) ->
