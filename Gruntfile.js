@@ -29,7 +29,7 @@ module.exports = function(grunt) {
         rename: {
             main: {
                 files: [
-                    {expand:true, flatten:true, src: "build/*.tgz", dest: "dist/"}
+                    {expand:true, flatten:true, src: "build/*.tgz", dest: "../dist/"}
                 ]
             }
         },
