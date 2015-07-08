@@ -2,7 +2,7 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         clean: [
-            "build"
+            "dist"
         ],
         coffee: {
             compile: {
@@ -11,18 +11,18 @@ module.exports = function(grunt) {
                         expand: true,
                         cwd: 'lib/',
                         src: ["**/*.coffee"],
-                        dest: "build/lib/",
+                        dest: "dist/",
                         ext: ".js"
                     },
-                    {src: "index.coffee", dest: "build/index.js"}
+                    {src: "index.coffee", dest: "dist/index.js"}
                 ]
             }
         },
         copy: {
             main: {
                 files: [
-                    {src: "package.json", dest: "build/"},
-                    {src: "README.md", dest: "build/"}
+                    {src: "package.json", dest: "dist/"},
+                    {src: "README.md", dest: "dist/"}
                 ]
             }
         },
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         },
         npm: {
             options: {
-                cwd: "build"
+                cwd: "dist"
             },
             package: "pack"
         }

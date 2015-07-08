@@ -2,7 +2,9 @@
   "name": "mongoose-validators-unique",
   "author": "keijro@gmail.com",
   "version": "0.0.1",
-  "private": true,
+  "private": false,
+  "repository": "kejiro/mongoose-validators-unique",
+  "description": "Unique Mongoose validator with support for scoped uniqueness",
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-contrib-clean": "^0.6.0",
